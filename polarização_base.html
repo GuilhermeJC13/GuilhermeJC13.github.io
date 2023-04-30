@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de Transistores</title>
+    <script src="calculate.js"></script>
+</head>
+<body>
+	<a href="home.html">Home</a>
+	<h1>Calculadora de Transistores (Polarização base)</h1>
+	<form>
+        <label for="vcc">Tensão Coletor-Coletor (VCC):</label>
+		<input type="number" id="vcc" name="vcc" placeholder="Insira a tensão VCC" required="True">
+		<br><br>
+
+        <label for="vbb">Tensão Base-Base (VBB):</label>
+		<input type="number" id="vbb" name="vbb" placeholder="Insira a tensão VBB" required="True">
+		<br><br>
+
+		<label for="vbe">Tensão Base-Emissor (VBE) [0-0.7]:</label>
+		<input type="number" id="vbe" name="vbe" placeholder="Insira a tensão VBE" required="True">
+		<br><br>
+
+		<label for="rb">Resistência na Base (RB):</label>
+		<input type="number" id="rb" name="rb" placeholder="Insira a resistência RB" required="True">
+		<br><br>
+
+		<label for="rc">Resistência no Coletor (RC):</label>
+		<input type="number" id="rc" name="rc" placeholder="Insira a resistência RC" required="True">
+		<br><br>
+
+        <label for="hfe">Ganho de Corrente (hFE):</label>
+		<input type="number" id="hfe" name="hfe" placeholder="Insira o ganho de corrente hFE" required="True">
+		<br><br>
+
+		<button type="button" onclick="calculate_pol_base()">Calcular</button>
+	</form>
+
+	<img src="images/pol_base.jpg" alt="Circuito com polarização na base" width="400">
+
+	<br><br>
+
+	<table id="table_result"></table>
+</body>
+</html>

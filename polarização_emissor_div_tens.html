@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de Transistores</title>
+    <script src="calculate.js"></script>
+</head>
+<body>
+	<a href="home.html">Home</a>
+	<h1>Calculadora de Transistores (Polarização emissor com divisor de tensão)</h1>
+	<form>
+        <label for="vcc">Tensão Coletor-Coletor (VCC):</label>
+		<input type="number" id="vcc" name="vcc" placeholder="Insira a tensão VCC" required="True">
+		<br><br>
+
+		<label for="vbe">Tensão Base-Emissor (VBE):</label>
+		<input type="number" id="vbe" name="vbe" placeholder="Insira a tensão VBE" required="True">
+		<br><br>
+
+		<label for="r1">Resistência 1 (R1):</label>
+		<input type="number" id="r1" name="r1" placeholder="Insira a resistência R1" required="True">
+		<br><br>
+
+		<label for="r2">Resistência 2 (R2):</label>
+		<input type="number" id="r2" name="r2" placeholder="Insira a resistência R2" required="True">
+		<br><br>
+
+		<label for="rc">Resistência no Coletor (RC):</label>
+		<input type="number" id="rc" name="rc" placeholder="Insira a resistência RC" required="True">
+		<br><br>
+
+		<label for="re">Resistência no Emissor (RE):</label>
+		<input type="number" id="re" name="re" placeholder="Insira a resistência RE">
+		<br><br>
+
+		<button type="button" onclick="calculate_pol_emissor_div_tens()">Calcular</button>
+	</form>
+
+	<img src="images/pol_emissor_div_tens.jpg" alt="Circuito com polarização no emissor" width="400">
+
+	<br><br>
+
+	<div id="results"></div>
+</body>
+</html>
